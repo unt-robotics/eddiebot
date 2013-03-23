@@ -1,0 +1,12 @@
+<launch>
+
+  <include file="$(find openni_launch)/launch/openni.launch"/> 
+  <!-- fake laser -->
+  <node pkg="nodelet" type="nodelet" name="kinect_laser" args="load depthimage_to_laserscan/DepthImageToLaserScanNodelet camera_nodelet_manager">
+    <param name="output_frame_id" value="/scanner"/>
+    <remap from="image" to="/camera/depth/image_raw"/>
+  </node>
+
+</launch>
+
+

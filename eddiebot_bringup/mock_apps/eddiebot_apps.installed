@@ -1,0 +1,3 @@
+apps:
+ - display: Follower
+   app: eddiebot_follower/follower

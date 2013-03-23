@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /opt/ros/groovy/stacks/eddiebot/eddiebot/eddiebot_driver/build/devel/setup.sh
