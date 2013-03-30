@@ -8,8 +8,8 @@ if [ -s /etc/ros/setup.bash ]; then
     echo "$DATE: eddiebot-stop using setup file /etc/ros/setup.bash" >> $log_file
     source /etc/ros/setup.bash
 else
-    echo "$DATE: eddiebot-stop using setup file /opt/ros/fuerte/setup.bash" >> $log_file
-    source /opt/ros/fuerte/setup.bash
+    echo "$DATE: eddiebot-stop using setup file /opt/ros/groovy/setup.bash" >> $log_file
+    source /opt/ros/groovy/setup.bash
 fi
 
 for i in $( rosnode list ); do
