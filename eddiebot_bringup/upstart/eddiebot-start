@@ -9,7 +9,7 @@ if [ -s /etc/ros/setup.bash ]; then
     source /etc/ros/setup.bash
 else
     echo "$DATE: eddiebot-start using setup file /opt/ros/groovy/setup.bash" >> $log_file
-    source /opt/ros/fuerte/setup.bash
+    source /opt/ros/groovy/setup.bash
 fi
 
 interface=wlan0
