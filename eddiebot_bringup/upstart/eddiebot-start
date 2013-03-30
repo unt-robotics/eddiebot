@@ -8,7 +8,7 @@ if [ -s /etc/ros/setup.bash ]; then
     echo "$DATE: eddiebot-start using setup file /etc/ros/setup.bash" >> $log_file
     source /etc/ros/setup.bash
 else
-    echo "$DATE: eddiebot-start using setup file /opt/ros/fuerte/setup.bash" >> $log_file
+    echo "$DATE: eddiebot-start using setup file /opt/ros/groovy/setup.bash" >> $log_file
     source /opt/ros/fuerte/setup.bash
 fi
 
@@ -24,8 +24,8 @@ if [ "$ROS_IP" = "" ]; then
     exit 1
 fi
 
-if [ -s /etc/ros/fuerte/eddiebot.launch ]; then
-    setuidgid eddiebot roslaunch /etc/ros/fuerte/eddiebot.launch
+if [ -s /etc/ros/groovy/eddiebot.launch ]; then
+    setuidgid eddiebot roslaunch /etc/ros/groovy/eddiebot.launch
 else
     setuidgid eddiebot roslaunch eddiebot_bringup minimal.launch
 fi
