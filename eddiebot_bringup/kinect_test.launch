@@ -8,7 +8,7 @@
   <arg name="manager" value="$(arg camera)_nodelet_manager" />
 
   <!-- Depth registration -->
-  <arg name="depth_registration" default="true"/>
+  <arg name="depth_registration" default="false"/>
   <arg     if="$(arg depth_registration)" name="depth" value="depth_registered" />
   <arg unless="$(arg depth_registration)" name="depth" value="depth" />
   
@@ -17,11 +17,7 @@
 
   <group ns="$(arg camera)">
     <node pkg="nodelet" type="nodelet" name="$(arg manager)" respawn="true" args="manager"/>
-    <node pkg="nodelet" type="nodelet" name="openni_camera_loader" args="load openni_camera/driver $(arg manager)" respawn="true">
-        <rosparam file="$(find eddiebot_bringup)/config/kinect.yaml" command="load"/>
-        <param name="depth_registration" value="$(arg depth_registration)"/>
-    </node>
-    
+        
     <!--                        Laserscan 
       This uses lazy subscribing, so will not activate until scan is requested.
     -->
