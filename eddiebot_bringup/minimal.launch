@@ -16,8 +16,7 @@
     <param name="update_rate" value="30.0" />
   </node>
 
-  <!--
-  <!-- Eddiebot Laptop Battery Diagnostics -->
+  <!-- Eddiebot Laptop Battery Diagnostics 
   <node pkg="eddiebot_node" type="laptop_battery.py" name="eddiebot_laptop_battery">
         <param name="acpi_path" type="string" value="/proc/acpi/battery/BAT0" />
   </node>
